@@ -10,7 +10,9 @@ def menuprincipal():
 8.Cargar CSV
 9.Salir
 """)
+    #esta funcion muestra el menu para poder llamarlo en el main
 def bienvenida_inventario():
     print("""
 Bienvenido, este es el inventario.
 estas son las opciones disponibles: """)
+#esta funcion es una bienvenida
