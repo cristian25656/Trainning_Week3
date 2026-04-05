@@ -68,12 +68,15 @@ digite: (si/no):
             if not inventario:
                 print("El inventario está vacío. No se puede calcular")
             else:
-                v_total, c_unidades, total_registros = calcular_estadisticas(inventario)
+                v_total, c_unidades, total_registros, mas_caro, mayor_stock = calcular_estadisticas(inventario)
                 print(f"""
 Estadisticas:
-cantidad de productos: {total_registros}
-total de unidades en stock: {c_unidades}
-valor total del inventario: {v_total}
+Cantidad de productos: {total_registros}
+Total de unidades: {c_unidades}
+Valor total: {v_total}
+
+Producto más caro: {mas_caro['nombre']} (${mas_caro['precio']})
+Producto con más stock: {mayor_stock['nombre']} ({mayor_stock['cantidad']} unidades)
 """)
         elif opcion == 7:
             guardar_csv(inventario, "inventario.csv")
